@@ -8,8 +8,8 @@
    
     "content_scripts": [{
       "run_at": "document_idle",
-      "css": ["styles-dan.css"],
-      "js": ["content-dan.js"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
       "matches": ["https://twitter.com/*"]
     }]
    

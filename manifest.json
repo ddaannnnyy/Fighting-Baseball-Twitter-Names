@@ -2,8 +2,8 @@
     "manifest_version": 2,
    
     "name": "Fighting Baseball Twitter Names",
-    "version": "1.0.0",
-    "description": "randomly assigns twitter users new names from the famous translated Fighting Baseball roster tweet.",
+    "version": "1.0.1",
+    "description": "Randomly assigns twitter users new names from the viral localised Fighting Baseball roster tweet.",
     "icons": {"128": "icon128.png"},
    
     "content_scripts": [{

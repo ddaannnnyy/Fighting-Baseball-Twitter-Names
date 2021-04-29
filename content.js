@@ -1,10 +1,14 @@
 
+
 function myFunction() {
-    var names = document.getElementsByClassName("css-4rbku5 css-18t94o4 css-1dbjc4n r-1loqt21 r-1wbh5a2 r-dnmrzs r-1ny4l3l");
+    //this gets all elements which share the class list of display names.
+    var names = document.getElementsByClassName("css-4rbku5 css-18t94o4 css-1dbjc4n r-1loqt21 r-1wbh5a2 r-dnmrzs r-1ny4l3l"); 
     var index = 0;
     
     try {
+        // for each display name found in the HTMLCollection randomise a number and then choose a name from the switch case
         for (index = 0; index < names.length; index++) {
+
             var number = 0;
             var baseballName;
 
@@ -84,19 +88,24 @@ function myFunction() {
             }
 
 
+            //writes new name to the innerHTML of the display name a href
             names[index].innerHTML = baseballName;
-            if (names.item(index).classList.contains("new-name")) {
 
+            if (names.item(index).classList.contains("new-name")) {
+                //does not add .new-name if it already exists
             }
             else {
+                //adds .new-name to the element for styling
                 names.item(index).className = " new-name";
             }
         }
     } catch (error) {
+        //errors are simply logged
         console.log(error);
     }
 }
 
+//name swap runs every second to make sure when twitter refreshes the names are changed.
 window.setInterval(function () {
     myFunction();
 }, 1000);
